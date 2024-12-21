@@ -63,11 +63,29 @@ The database, named Globus Bank Ltd Database, consists of five tables.
 | last_name         | VARCHAR (100)       | NOT NULL                           | 
 | date_Of_birth     | DATE                | NOT NULL                           |
 | Email_Address     | VARCHAR (100)       | UNIQUE, NOT NULL                   | 
-
-
 | Phone_Number      | VARCHAR (11)        | UNIQUE, NOT NULL                   |
 | date_created      | DATE                | NOT NULL                           |
 
+#### Branches Table
+
+| Column            | Data Type           | Constraints                        |
+|-------------------|---------------------|------------------------------------|
+| branch_id         | INT                 | PRIMARY KEY, AUTO- INCREMENT       |
+| branch_name       | VARCHAR (100)       | NOT NULL                           |
+| branch_location   | VARCHAR (100)       | NOT NULL                           | 
+| contact_number    | VARCHAR (15)        | NOT NULL                           | 
+
+#### Accounts Table
+
+| Column            | Data Type           | Constraints                        |
+|-------------------|---------------------|------------------------------------|
+| account_id        | INT                 | PRIMARY KEY, AUTO- INCREMENT       |
+| first_name        | VARCHAR (100)       | NOT NULL                           |
+| last_name         | VARCHAR (100)       | NOT NULL                           | 
+| date_Of_birth     | DATE                | NOT NULL                           |
+| Email_Address     | VARCHAR (100)       | UNIQUE, NOT NULL                   | 
+| Phone_Number      | VARCHAR (11)        | UNIQUE, NOT NULL                   |
+| date_created      | DATE                | NOT NULL                           |
 
 
 
