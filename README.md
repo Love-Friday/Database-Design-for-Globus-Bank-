@@ -77,17 +77,38 @@ The database, named Globus Bank Ltd Database, consists of five tables.
 
 #### Accounts Table
 
-| Column            | Data Type           | Constraints                        |
-|-------------------|---------------------|------------------------------------|
-| account_ID        | INT                 | PRIMARY KEY, AUTO- INCREMENT       |
-| account_number    | VARCHAR (10)        | UNIQUE, NOT NULL                   |
-| customer_id       | INT                 | FOREIGN, NOT NULL                           |
-| Marital_Status    | CHAR (1)            | CHECCK IN ('M', 'S', 'D'), NOT NULL|
-| Address           | VARCHAR (150)       | NOT NULL                           |
-| State             | VARCHAR (30)        | NOT NULL                           |
-| Phone_Number      | CHAR (11)           | UNIQUE, NOT NULL                   |
-| Email_Address     | VARCHAR (100)       | UNIQUE, NOT NULL                   |
-|HMO_Insurance      | VARCHAR (20)        |                                    |
+| Column            | Data Type           | Constraints                                                |
+|-------------------|---------------------|------------------------------------------------------------|
+| account_ID        | INT                 | PRIMARY KEY, AUTO- INCREMENT                               |
+| account_number    | VARCHAR (10)        | UNIQUE, NOT NULL                                           |
+| customer_id       | INT                 | FOREIGN KEY REFERENCES Customers                           |
+|branch_id          | INT                 | FOREIGN KEY REFERENCES Branches                            |
+| account_type      | VARCHAR (50)        | CHECCK IN ('Savings', 'Current', 'Fixed Deposit'), NOT NULL|
+| balance           | DECIMAL             | NOT NULL                                                   |
+| date_opened       | DATE                | NOT NULL                                                   |
+
+#### Transactions Table
+
+| Column                  | Data Type           | Constraints                                                |
+|-------------------------|---------------------|------------------------------------------------------------|
+| transaction_id          | INT                 | PRIMARY KEY, AUTO- INCREMENT                               |
+| account_id              | INT                 | FOREIGN KEY REFERENCES Accounts                            |
+| transaction_type        | VARCHAR (50)        | CHECCK IN ('Savings', 'Current', 'Fixed Deposit'), NOT NULL|
+| amount                  |  DECIMAL            | NOT NULL                                                   |
+| transaction_date        | DATE                | NOT NULL                                                   |
+| transaction_description | DECIMAL             | NOT NULL                                                   |
+
+#### Loans Table
+
+| Column                  | Data Type           | Constraints                                                |
+|-------------------------|---------------------|------------------------------------------------------------|
+| loan_id                 | INT                 | PRIMARY KEY, AUTO- INCREMENT                               |
+| customer_id             | INT                 | FOREIGN KEY REFERENCES Customers                           |
+| loan_amount             | DECIMAL             | NOT NULL                                                   |
+| interest_rate           | DECIMAL             | NOT NULL                                                   |
+| loan_status             | VARCHAR             | CHECCK IN ('Active', 'Settled', 'Overdue'), NOT NULL       |
+| start_date              | DATE                | NOT NULL                                                   |
+| due_date                | DATE                | NOT NULL                                                   |
 
 
 
