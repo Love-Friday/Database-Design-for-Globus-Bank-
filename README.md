@@ -54,7 +54,19 @@ The scope includes five primary tables:
 The database, named Globus Bank Ltd Database, consists of five tables. 
 
 ### Table Description
+#### Customers Table
 
+| Column            | Data Type           | Constraints                        |
+|-------------------|---------------------|------------------------------------|
+| customer_id       | INT                 | PRIMARY KEY, AUTO- INCREMENT       |
+| first_name        | VARCHAR (100)       | NOT NULL                           |
+| last_name         | VARCHAR (100)       | NOT NULL                           | 
+| date_Of_birth     | DATE                | NOT NULL                           |
+| Email_Address     | VARCHAR (100)       | UNIQUE, NOT NULL                   | 
+
+
+| Phone_Number      | VARCHAR (11)        | UNIQUE, NOT NULL                   |
+| date_created      | DATE                | NOT NULL                           |
 
 
 
