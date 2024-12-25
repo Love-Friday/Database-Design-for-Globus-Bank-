@@ -44,11 +44,11 @@ The objective of this project is to create a robust database schema that reflect
 
 ### Scope of the Database
 The scope includes five primary tables:
-1.	Customers – Stores personal information of customers.
-2.	Branches – Contains data related to the bank’s branches.
-3.	Accounts – Manages customer bank accounts.
-4.	Transactions – Records all transactions made by customers.
-5.	Loans – Handles loan-related data, including amounts, types, and status.
+1.	**Customers** – Stores personal information of customers.
+2.	**Branches** – Contains data related to the bank’s branches.
+3.	**Accounts** – Manages customer bank accounts.
+4.	**Transactions** – Records all transactions made by customers.
+5.	**Loans** – Handles loan-related data, including amounts, types, and status.
 
 ### Database and Table Structure
 The database, named Globus Bank Ltd Database, consists of five tables. 
